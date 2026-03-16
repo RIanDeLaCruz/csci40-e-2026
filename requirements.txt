@@ -14,7 +14,6 @@ parso==0.8.5
 pexpect==4.9.0
 pickleshare==0.7.5
 pillow==10.4.0
-pkg_resources==0.0.0
 prompt_toolkit==3.0.52
 psycopg==3.2.13
 psycopg-binary==3.2.13
