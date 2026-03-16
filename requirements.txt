@@ -1,7 +1,6 @@
 asgiref==3.8.1
 asttokens==3.0.1
 backcall==0.2.0
-backports.zoneinfo==0.2.1
 decorator==5.2.1
 Django==4.2.27
 executing==2.2.1
