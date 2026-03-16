@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Task List</h1>
+  <ul>
+    {% for task in task_list %}
+      <li>
+        <a href="{{task.get_absolute_url}}">
+          {{ task }}
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <form method="POST">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" name="submit" value="Save Form">
+  </form>
+{% endblock %}

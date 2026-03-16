@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <a href="/tasks/list">Home</a>
+  <h1>Task Detail</h1>
+  <p>{{ task.name }}</p>
+  <p>{{ task.due_date }}</p>
+  <img src="{{ task.task_image.url }}" alt="">
+
+  <form method="POST" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ form }}
+    <input type="submit" name="submit" value="Save Form">
+  </form>
+
+{% endblock %}

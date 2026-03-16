@@ -1,0 +1,23 @@
+{% load static %}
+<html lang="en">
+  <head>
+    <title>Task App</title>
+    <link rel="stylesheet" href="{% static 'main.css' %}" type="text/css">
+    <style></style>
+    {% block styles %}{% endblock %}
+  </head>
+  <body>
+    <img src="{% static 'laptop.jpg' %}">
+    {% if request.user.is_authenticated %}
+      Hello, {{ request.user }}!
+      <form method="POST" action="{% url 'logout' %}">
+        {% csrf_token %}
+      <button type="submit">Logout</button>
+      </form>
+    {% else %}
+    <a href="{% url 'login' %}">Login</a>
+    <a href="{% url 'password_reset' %}">Forgot Password</a>
+    {% endif %}
+    {% block content %}{% endblock %}
+  </body>
+</html>
