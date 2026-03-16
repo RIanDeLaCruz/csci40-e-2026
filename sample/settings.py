@@ -30,6 +30,9 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 DEBUG = True
 
 ALLOWED_HOSTS = ['server-production-5c00.up.railway.app']
+CSRF_TRUSTED_ORIGINS = ["https://server-production-5c00.up.railway.app"]
+CSRF_ALLOWED_ORIGINS = ["https://server-production-5c00.up.railway.app"]
+CORS_ORIGINS_WHITELIST = ["https://server-production-5c00.up.railway.app"]
 
 
 # Application definition
